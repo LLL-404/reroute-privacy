@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>《改道》素材使用声明（含 AI 生成资产说明）· 2026 聚光灯 21 天游戏创作挑战</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { margin:0; font-family:-apple-system,"Microsoft YaHei","PingFang SC","Noto Sans SC",sans-serif;
+         background:#0f1115; color:#e8e8e8; line-height:1.85; }
+  main { max-width:900px; margin:0 auto; padding:56px 22px 90px; }
+  h1 { font-size:26px; margin:0 0 6px; color:#f0d68a; }
+  h2 { font-size:19px; margin:34px 0 10px; padding-bottom:6px; border-bottom:1px solid #2c3138; color:#9fe3d0; }
+  .sub { color:#9aa3ad; margin-bottom:26px; font-size:14px; }
+  table { width:100%; border-collapse:collapse; font-size:14px; margin:12px 0; }
+  th, td { border:1px solid #2c3138; padding:8px 10px; text-align:left; vertical-align:top; }
+  th { background:#161a20; color:#f0d68a; font-weight:600; }
+  ul { padding-left:22px; }
+  footer { margin-top:40px; color:#8b939c; font-size:13px; border-top:1px solid #2c3138; padding-top:14px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>《改道》素材使用声明（含 AI 生成资产说明）</h1>
+  <div class="sub">
+    2026 TapTap 聚光灯 · 21 天游戏创作挑战 投稿附件 ·
+    提交方：工具道具的工作室（队长 QQ 2350178663）· 截至 2026-10-20
+  </div>
+
+  <p>口径：逐类披露本作中 <strong>AI 参与生产的资产</strong>、所用工具、人工加工环节，以及
+  <strong>纯人工 / 程序生成</strong>的部分与 <strong>第三方素材</strong>授权情况。</p>
+
+  <h2>一、AI 生成资产</h2>
+  <p>合计：3D 模型 <strong>14 个 glb</strong>（含源 4 级 LOD：lod0–lod3，运行时按屏占比切级）；
+  音频 <strong>30 条</strong>（28 音效 + 2 BGM）；应用图标五件套；商店详情页宣传素材若干。</p>
+  <table>
+    <tr><th>类别</th><th>内容</th><th>工具 / 来源</th><th>人工加工</th></tr>
+    <tr>
+      <td>单位 3D 模型</td>
+      <td>虫族三形态（镰爪战虫 / 重甲虫王 / 幼生工虫），带骨骼蒙皮与 PBR 贴图（D/N）</td>
+      <td>云端多视图生成管线，输入为下方 AI 概念四视图</td>
+      <td>经转换脚本统一缩放 / 贴地 / 材质入库；骨骼动画由程序烘焙（见二）</td>
+    </tr>
+    <tr>
+      <td>概念图</td>
+      <td>上述三形态 + 兽人酋长 / 战士 / 工虫 + 砂金矿，共 7 组 ×4 视图</td>
+      <td>云端图像生成（多视图概念评审流程）</td>
+      <td>人工评审定稿</td>
+    </tr>
+    <tr>
+      <td>场景物件</td>
+      <td>砂金堆四档耗损模型、瓦砾堆变体 ×3、矿格砂金矿块、建筑三件（石砌矮墙 / 石砌金帽塔 / 青玉晶体核心）</td>
+      <td>同上管线（含文本直出）</td>
+      <td>摆放口径（缩进 / 贴地 / 确定性取模）为代码实现</td>
+    </tr>
+    <tr>
+      <td>音效</td>
+      <td>全部 <strong>28</strong> 条：虫族 6 + 兽人族 6 + 场景 15 + 开屏 stinger 1</td>
+      <td>云端音效生成（其中 9 条为 TapTap 制造平台生成额度）</td>
+      <td>音量分级、轮换池防同帧互掐为代码实现</td>
+    </tr>
+    <tr>
+      <td>战斗音乐</td>
+      <td>对局 BGM 与结算 BGM 各 1</td>
+      <td>云端音乐生成（结算 BGM 为制造平台生成额度）</td>
+      <td>循环点、音量与终局切换由代码设定</td>
+    </tr>
+    <tr>
+      <td>应用图标</td>
+      <td>主图 / Android 192 / 自适应前景与背景 / Windows 多尺寸 .ico</td>
+      <td>TapTap 制造平台生成额度</td>
+      <td>定稿选取与各平台导出接线由人工完成</td>
+    </tr>
+    <tr>
+      <td>商店宣传素材</td>
+      <td>头图 ×1 + 宣传图 ×4（1920×1080）</td>
+      <td>TapTap 制造平台生成额度</td>
+      <td>构图拼配与选用由人工裁定（详情页另置实机图 5 张，非 AI）</td>
+    </tr>
+  </table>
+
+  <h2>二、程序生成资产（非 AI、非动捕）</h2>
+  <ul>
+    <li><strong>单位动画</strong>：15 条基础动作（Idle / Crawl / Attack / Hurt / Death ×3 形态）由离线脚手架对绑定骨架
+      <strong>程序化烘焙</strong>，不使用动作捕捉、不使用 AI。</li>
+    <li><strong>地形</strong>：64×64 战场高度场（脊线 / 盆地 / 核心台地 + 外围噪声山岭）为
+      <strong>固定种子值噪声程序生成</strong>，逐局一致；叠加程序化地形蓝图（fbm / warp / ramp / landmark 积木，
+      canyon / shale / ember 三预设逐局轮换）。视图种子与仿真严格隔离，同样<strong>非 AI</strong>。</li>
+  </ul>
+
+  <h2>三、AI 辅助编写（人工裁定与署名）</h2>
+  <ul>
+    <li><strong>游戏代码</strong>（模拟核心 / 视图 / HUD / 验证体系）：由 AI 在作者逐项裁定下编写；
+      架构、数值、波次表、验证闸口径均为人工决策，确定性对拍（逐 tick 指纹）机器验证。</li>
+    <li><strong>开发日志</strong>：AI 起草、作者审定署名后发布。</li>
+  </ul>
+
+  <h2>四、纯人工部分</h2>
+  <ul>
+    <li>玩法设计（「放墙改道」核心机制、改道经济、波次节奏）</li>
+    <li>关卡夹具（64×64 地形语义：岩脊、咽喉、盆地开门陷阱、矿位）</li>
+    <li>全部数值与平衡裁定、验证体系（21 项闸：单测 + 验收探针 + 截图像素校验）设计</li>
+    <li>详情页实机图 5 张（对局内实拍渲染，非 AI）</li>
+  </ul>
+
+  <h2>五、引擎与第三方素材</h2>
+  <ul>
+    <li><strong>引擎</strong>：Godot Engine 4.7.2 stable (mono)（官方导出模板）；未随本作引入任何第三方插件。</li>
+    <li><strong>第三方素材 3 项</strong>：
+      <ol>
+        <li><strong>Noto Sans SC</strong> 字体（SIL OFL 1.1，版权归 Adobe）——随包附许可全文与声明件。</li>
+        <li><strong>Noto Serif SC Bold 按需子集</strong>（SIL OFL 1.1，版权归 Adobe；由同项目可变字体实例化
+          wght=700 并子集化，属 <em>Modified Version</em>）——仅用于标题字。</li>
+        <li><strong>地表纹理 4 张</strong>（ambientCG Ground093C / Rock061 漫反射 + 法线，<strong>CC0 1.0</strong>，
+          无署名义务；Roughness 通道未随包）。</li>
+      </ol>
+    </li>
+    <li>引擎自带默认资源（图标 / 主题 / 示例）未用于本作代表性内容。</li>
+  </ul>
+
+  <footer>
+    本文档随包体更新同步修订；作者对本声明内容的真实性负责。<br>
+    联系：15864488375@163.com
+  </footer>
+</main>
+</body>
+</html>
